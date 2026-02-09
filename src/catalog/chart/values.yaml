@@ -87,6 +87,10 @@ app:
 mysql:
   create: false
 
+  waitFor:
+    enabled: true
+    image: public.ecr.aws/docker/library/busybox:1.36
+
   image:
     repository: public.ecr.aws/docker/library/mysql
     pullPolicy: IfNotPresent
